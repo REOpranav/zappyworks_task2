@@ -82,7 +82,9 @@ function start() {
             if (displayCharName === b.trim()) {
                 header.textContent = a[b]?.header;
                 pTag.textContent = a[b].detail;
-                img.setAttribute('src', a[b].img);
+                setTimeout(() => {
+                    img.setAttribute('src', a[b].img);
+                }, 20);
                 settingAndRemovingID()
 
                 gettingDivElementForProgress[number].style.border = '2px solid white'
@@ -114,7 +116,7 @@ const gettingDivElementForProgress = document.querySelectorAll('.progress_contai
 function showData() {
     if (number >= ans) {
         number = 0
-        gettingDivElementForProgress.forEach((value)=>{
+        gettingDivElementForProgress.forEach((value) => {
             value.style.border = '2px solid #9c9292'
         });
     }
