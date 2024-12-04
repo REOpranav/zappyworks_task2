@@ -1,0 +1,175 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     color: white;
+     background-color: black;
+ }
+
+ :root {
+     --font_family: "Lexend", sans-serif;
+     --font_optical-_sizing: auto;
+     --font-weight: 300;
+     --textMargin: 30px;
+     --maxWidth: 29%
+ }
+
+ .status {
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+ }
+
+ main {
+     min-width: var(--maxWidth);
+     max-width: var(--maxWidth);
+     min-height: 100vh;
+     max-height: 100vh;
+
+     font-family: var(--font_family);
+     font-optical-sizing: var(--font_optical-_sizing);
+     font-weight: var(--font-weight);
+     overflow: hidden;
+
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .progressHead {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     justify-content: space-between;
+     box-shadow: 1px 1px 10px black;
+ }
+
+ img {
+     width: var(--maxWidth);
+     max-height: 100%;
+     min-height: 100%;
+     overflow: hidden;
+     position: absolute;
+     transition: 0.3s all ease-in-out;
+     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+     z-index: -1;
+ }
+
+ .progress_container {
+     border: 2px solid #9c9292;
+     opacity: 0.8;
+     box-shadow: 4px 4px 10px black;
+     max-width: 100%;
+ }
+
+ main>.section {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ main>section>h3 {
+     margin-bottom: 10px;
+ }
+
+ main>section>h3,
+ main>section>p {
+     text-align: center;
+ }
+
+ main>section>p {
+     min-width: 80%;
+     max-width: 80%;
+     font-size: large;
+     margin-bottom: var(--textMargin);
+ }
+
+ #animate {
+     position: relative;
+     animation: headBack 1s 1;
+     transition: 0.9s all ease-in-out;
+ }
+
+ @keyframes headBack {
+     from {
+         top: 300%;
+     }
+
+     to {
+         top: 0%;
+     }
+ }
+
+ @keyframes myfirst {
+     0% {
+         background: red;
+         left: 0%;
+         top: 0px;
+     }
+
+     100% {
+         background: yellow;
+         left: 100%;
+         top: 0px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     main {
+         min-width: 70%;
+         max-width: 70%;
+     }
+
+     main>h3 {
+         margin-bottom: none;
+     }
+
+     main>p {
+         min-width: 100%;
+         max-width: 100%;
+         font-size: large;
+         margin-bottom: 30px;
+     }
+
+     img {
+         min-height: 100vh;
+     }
+ }
+
+ @media (max-width: 768px) {
+     main {
+         min-width: 70%;
+         max-width: 70%;
+     }
+
+     main>h3 {
+         margin-bottom: none;
+     }
+
+     main>p {
+         min-width: 100%;
+         max-width: 100%;
+         font-size: small;
+         margin-bottom: 30px;
+     }
+
+     img {
+         min-height: 100vh;
+     }
+ }
+
+
+ @media (min-width: 769px) and (max-width: 1024px) {
+     main {
+         min-width: 30%;
+         max-width: 40%;
+     }
+
+     img {
+         min-height: 100vh;
+     }
+ }
