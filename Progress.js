@@ -87,7 +87,7 @@ function start() {
 
                 gettingDivElementForProgress[number].style.border = '2px solid white'
                 gettingDivElementForProgress[number].style.opacity = '1'
-                gettingDivElementForProgress[number].style.transition = '0.6s all ease-in-out'
+                gettingDivElementForProgress[number].style.transition = '0.9s all ease-in-out'
             }
         }
     }
@@ -97,7 +97,7 @@ function start() {
     main.appendChild(section)
 
     number++;
-    intervaID = setInterval(showData, 2000)
+    intervaID = setInterval(showData, 5000)
 }
 
 for (let a = 0; a < names.length; a++) {
